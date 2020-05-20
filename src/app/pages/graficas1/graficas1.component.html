@@ -1,1 +1,36 @@
-<p>graficas1 works!</p>
+<div class="row">
+  <div class="col-6">
+    <app-graphic
+      [legend]="graficos.grafico1.legend"
+      [labels]="graficos.grafico1.labels"
+      [type]="graficos.grafico1.type"
+      [data]="graficos.grafico1.data"
+    ></app-graphic>
+  </div>
+  <div class="col-6">
+    <app-graphic
+      [legend]="graficos.grafico2.legend"
+      [labels]="graficos.grafico2.labels"
+      [type]="graficos.grafico2.type"
+      [data]="graficos.grafico2.data"
+    ></app-graphic>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <app-graphic
+      [legend]="graficos.grafico3.legend"
+      [labels]="graficos.grafico3.labels"
+      [type]="graficos.grafico3.type"
+      [data]="graficos.grafico3.data"
+    ></app-graphic>
+  </div>
+  <div class="col-6">
+    <app-graphic
+      [legend]="graficos.grafico4.legend"
+      [labels]="graficos.grafico4.labels"
+      [type]="graficos.grafico4.type"
+      [data]="graficos.grafico4.data"
+    ></app-graphic>
+  </div>
+</div>
