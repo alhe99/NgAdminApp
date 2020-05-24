@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ChartsModule } from 'ng2-charts';
 import { GraphicComponent } from '../components/graphic/graphic.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 const components = [
   PagesComponent,
@@ -24,7 +25,8 @@ const components = [
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    AccountSettingsComponent
   ],
   exports: [
     ...components
