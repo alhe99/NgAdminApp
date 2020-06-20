@@ -87,5 +87,6 @@
   },
   "rulesDirectory": [
     "codelyzer"
-  ]
+  ],
+  "curly": [true, "next-line-multi-line"]
 }
