@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { User } from '../../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class UserService {
 
   private API: string = '';
-  private user: User;
-  private token: string;
+  public user: User;
+  public token: string;
 
   constructor(
     private http: HttpClient,
@@ -66,6 +66,9 @@ export class UserService {
       .pipe(map((data: any) => {
         this.saveStore(data.id, data.token, data.body);
         return true;
+      }), catchError(err => {
+        Swal.fire('Login Error!', err.error.message, 'error');
+        return throwError(err);
       }));
   }
 

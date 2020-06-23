@@ -15,9 +15,12 @@ import { GraphicComponent } from '../components/graphic/graphic.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
 
 const components = [
-  PagesComponent,
+  // PagesComponent,
   DashboardComponent,
   ProgressComponent,
   Graficas1Component,
@@ -30,7 +33,9 @@ const components = [
     ...components,
     AccountSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent,
+    SearchComponent
   ],
   exports: [
     ...components
@@ -39,7 +44,8 @@ const components = [
     SharedModule,
     PagesRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    PipesModule
   ]
 })
 export class PagesModule { }
